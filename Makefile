@@ -90,7 +90,7 @@ ROUTER_FILE1 = noc
 
 CONFLAGS = # -DPOWER_STAT
 
-CC = gcc
+CC = gcc-7
 #OFLAGS = -O3 -DNDEBUG -Wall
 SYSFLAGS = `./sysprobe`
 OFLAGS = -g -DDEBUG -DMESI -Wall $(SYSFLAGS) -m32 #-DASYNC_DVFS 
