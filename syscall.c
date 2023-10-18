@@ -405,6 +405,8 @@ sys_syscall(struct godson2_cpu *st, /* cpu to access */
 	    	md_inst_t inst,			/* system call inst */
 	    	int traceable)			/* traceable system call? */
 {
+return ;}
+#if 0
   word_t syscode = regs->regs_R[2];
 
   int pid = st->cpuid;
@@ -5516,3 +5518,4 @@ case SS_SYS_gettid:
 #endif /* MD_CROSS_ENDIAN */
 
 }
+#endif

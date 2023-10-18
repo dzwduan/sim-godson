@@ -103,7 +103,7 @@ struct mmap_arg_struct {
 
 typedef struct {
   t_long_t val[2];
-} __kernel_fsid_t;
+} _kernel_fsit_t;
 
 struct ss_statfs {
   t_long_t ss_f_type;
@@ -116,7 +116,7 @@ struct ss_statfs {
 
   /* Linux specials */
   t_long_t ss_f_bavail;
-  __kernel_fsid_t ss_f_fsid;
+  _kernel_fsit_t ss_f_fsid;
   t_long_t ss_f_namelen;
   t_long_t ss_f_spare[6];
 };

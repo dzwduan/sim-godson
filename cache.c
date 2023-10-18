@@ -71,14 +71,16 @@
 #include "noc.h"
 #include "sim.h"
 
+#include "cache.h"
+
 /* Head to list of unused mshr_full_event entries */
 struct mshr_full_event *mshr_full_free_list;
 
 /* Set predefined (but changeable via command-line) maximal
    numbers of various mshr components */
-int regular_mshrs;
-int prefetch_mshrs;
-int mshr_targets;
+extern int regular_mshrs;
+extern int prefetch_mshrs;
+extern int mshr_targets;
 
 /* flush caches on system calls */
 int flush_on_syscalls;
@@ -423,7 +425,7 @@ void increase_cache_packet_free_list()
    subsequently restarting) much cleaner. Could differentiate between functional
    and timing versions by not initializing the last three fields in the functional
    version (more efficient), but that's probably not a lot of overhead.  */
-inline cache_access_packet *
+cache_access_packet *
 cache_create_access_packet(void *mp, 			/* Pointer to level in the memory hierarchy */
 			   unsigned int cmd,
 			   md_addr_t addr, 

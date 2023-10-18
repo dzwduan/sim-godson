@@ -70,6 +70,7 @@
 #include "cache.h"
 #include "tlb.h"
 #include "dram.h"
+#include "mem.h"
 
 /* Memory bank definition counter */
 int mem_nelt = 0;
@@ -335,7 +336,7 @@ tick_t request_bank(tick_t now,
 
 /* This function is used for switching between the different functions needed
    for different memory bank codes (infinite b/w banks, real rambus model, etc.) */
-inline tick_t
+static inline tick_t
 bank_access_switch(tick_t now, 
 		   struct mem_bank *mp, 
 		   md_addr_t addr, 

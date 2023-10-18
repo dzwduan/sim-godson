@@ -179,6 +179,14 @@ mem_timing_bank_access(tick_t now,
 void 
 mem_func_bank_access(tick_t now,
 		     struct _cache_access_packet *m_packet);
+
+static inline tick_t
+bank_access_switch(tick_t now, 
+		   struct mem_bank *mp, 
+		   md_addr_t addr, 
+		   int cmd, 
+		   int nbytes)   ;  
+
 /*
  * The SimpleScalar virtual memory address space is 2^31 bytes mapped from
  * 0x00000000 to 0x7fffffff.  The upper 2^31 bytes are currently reserved for

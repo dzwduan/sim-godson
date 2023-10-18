@@ -57,7 +57,6 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <math.h>
-
 #include "cache.h"
 #include "eventq.h"
 #include "misc.h"

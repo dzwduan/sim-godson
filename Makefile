@@ -90,7 +90,7 @@ ROUTER_FILE1 = noc
 
 CONFLAGS = # -DPOWER_STAT
 
-CC = gcc-7
+CC = gcc
 #OFLAGS = -O3 -DNDEBUG -Wall
 SYSFLAGS = `./sysprobe`
 OFLAGS = -g -DDEBUG -DMESI -Wall $(SYSFLAGS) -m32 #-DASYNC_DVFS 
@@ -153,7 +153,7 @@ FFLAGS = -DL2BYPASS
 #
 # complete flags
 #
-CFLAGS = $(MFLAGS) $(FFLAGS) $(OFLAGS) $(BINUTILS_INC) $(BINUTILS_LIB) $(CONFLAGS)
+CFLAGS = $(MFLAGS) $(FFLAGS) $(OFLAGS) $(BINUTILS_INC) $(BINUTILS_LIB) $(CONFLAGS) -I.
 
 #
 # all the sources
